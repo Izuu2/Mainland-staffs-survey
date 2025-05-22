@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Step Survey</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="icon.jfif" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1>Survey</h1>
+<form id="surveyForm" action="https://formsubmit.co/izuu.ekeh@mainlandoil.com" method="POST">
+    <input type="hidden" name="_subject" value="New IT Survey Response">
+  <input type="hidden" name="_next" value="https://izuu2.github.io/Survey-form3/thank-you.html">
+
+  <div class="step active">
+    <label for="userName">Name</label>
+    <input type="text" id="userName" name="userName" required>
+  </div>
+  <!-- Step 1: Name -->
+  <div class="step active">
+    <label for="userName">What is your name?</label>
+    <input type="text" id="userName" name="userName" required />
+  </div>
+
+  <!-- Step 2: Department/Location -->
+  <div class="step">
+    <label for="location">Department/Location</label>
+    <select id="location" name="location" required>
+      <option value="">Select</option>
+      <option value="Head Office">Head Office</option>
+      <option value="Calabar">Calabar</option>
+      <option value="Owaza">Owaza</option>
+      <option value="Others">Others</option>
+    </select>
+    <input type="text" id="otherLocation" name="otherLocation" placeholder="Your branch" style="display: none; margin-top: 10px;" />
+  </div>
+
+  <!-- Step 3: Frequency of IT Support -->
+  <div class="step">
+    <label for="supportFrequency">How often do you require IT support?</label>
+    <select id="supportFrequency" name="supportFrequency" required>
+      <option value="">Select</option>
+      <option value="Daily">Daily</option>
+      <option value="Weekly">Weekly</option>
+      <option value="Monthly">Monthly</option>
+      <option value="Yearly">Yearly</option>
+    </select>
+  </div>
+
+  <!-- Step 4: IT Response Time -->
+  <div class="step">
+    <label for="responseTime">Rate the response time of the IT department:</label>
+    <select id="responseTime" name="responseTime" required>
+      <option value="">Select</option>
+      <option value="Excellent">Excellent</option>
+      <option value="Good">Good</option>
+      <option value="Fair">Fair</option>
+      <option value="Poor">Poor</option>
+    </select>
+  </div>
+
+  <!-- Step 5: Technical Competence -->
+  <div class="step">
+    <label for="competence">Rate the technical competence of the IT staff:</label>
+    <select id="competence" name="competence" required>
+      <option value="">Select</option>
+      <option value="Excellent">Excellent</option>
+      <option value="Good">Good</option>
+      <option value="Fair">Fair</option>
+      <option value="Needs Improvement">Needs Improvement</option>
+    </select>
+  </div>
+
+  <!-- Step 6: Common Issues -->
+  <div class="step">
+    <label for="frequentIssues">Which service frequently gives you issues?</label>
+    <select id="frequentIssues" name="frequentIssues" required>
+      <option value="">Select</option>
+      <option value="None">None</option>
+      <option value="Internet Access">Internet Access</option>
+      <option value="ERP System">ERP System</option>
+      <option value="Printer/scanner">Printer/scanner</option>
+      <option value="Hardware repairs">Hardware repairs</option>
+      <option value="Network/Server Access">Network/Server Access</option>
+      <option value="Others">Others</option>
+    </select>
+  </div>
+
+  <!-- Step 7: Satisfaction with IT Resolution -->
+  <div class="step">
+    <label for="issueResolution">Rate your satisfaction with how issues are resolved:</label>
+    <select id="issueResolution" name="issueResolution" required>
+      <option value="">Select</option>
+      <option value="Very Satisfied">Very Satisfied</option>
+      <option value="Satisfied">Satisfied</option>
+      <option value="Neutral">Neutral</option>
+      <option value="Unsatisfied">Unsatisfied</option>
+    </select>
+  </div>
+
+  <!-- Step 8: Suggested Improvements -->
+  <div class="step">
+    <label for="improvement">What improvements would you like to see in IT support?</label>
+    <input type="text" id="improvement" name="improvement" placeholder="Open text response" required />
+  </div>
+
+  <!-- Step 9: Interest in Training -->
+  <div class="step">
+    <label for="trainingInterest">Would you find IT training helpful?</label>
+    <select id="trainingInterest" name="trainingInterest" required>
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Maybe">Maybe</option>
+    </select>
+  </div>
+
+  <!-- Step 10: Preferred Training Topic -->
+  <div class="step">
+    <label for="trainingTopic">If yes, what topic interests you?</label>
+    <select id="trainingTopic" name="trainingTopic">
+      <option value="">Select</option>
+      <option value="Basic Cybersecurity">Basic Cybersecurity</option>
+      <option value="Using ERP tools">Using ERP tools effectively</option>
+      <option value="MS Office">MS Office</option>
+      <option value="Networking">Networking</option>
+    </select>
+  </div>
+
+  <!-- Step 11: Communication Feedback -->
+  <div class="step">
+    <label for="communication">Is there enough IT communication on maintenance, upgrades, downtime?</label>
+    <select id="communication" name="communication" required>
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Could be better">Could be better</option>
+    </select>
+  </div>
+
+  <!-- Step 12: Final Comments -->
+  <div class="step">
+    <label for="finalComments">Any comments?</label>
+    <textarea id="finalComments" name="finalComments"></textarea>
+  </div>
+
+  <!-- Navigation -->
+  <!-- <div class="navigation">
+    <button type="submit">Submit</button>
+  </div> -->
+  <div class="navigation">
+<button type="submit" id="nextBtn">Next</button>
+  </div>
+  </form>
+</form>
+
+
+
+    <div id="thankYouMessage" style="display: none;">
+      <h2>Thank you for your feedback!</h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
